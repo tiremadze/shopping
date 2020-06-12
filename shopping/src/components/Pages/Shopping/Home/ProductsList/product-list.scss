@@ -1,0 +1,17 @@
+@import "../../../../../styles/scss/partials/mixins";
+
+.product-section {
+  padding-top: 30px;
+}
+
+.product-block {
+  @include flex();
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @media (max-width: 1296px) {
+    justify-content: center;
+    > div {
+      margin-left: 15px;
+    }
+  }
+}

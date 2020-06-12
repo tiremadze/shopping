@@ -1,0 +1,20 @@
+@import "../../../styles/scss/partials/mixins";
+
+.button {
+  @include btn($width: 225px, $border-color: #38373778, $height: 0px);
+  height: 44px;
+  outline: none;
+  background: none;
+  span {
+    font-size: 30px;
+    margin-right: 5px;
+    font-weight: 100;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  @media (max-width: 320px) {
+    margin: 0 auto;
+  }
+}

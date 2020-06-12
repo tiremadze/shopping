@@ -1,0 +1,49 @@
+@import "../../../../styles/scss/partials/mixins";
+
+.cart-section {
+  padding-top: 50px;
+  text-transform: capitalize;
+  width: 100%;
+  @media (max-width: 1130px) {
+    text-align: center;
+  }
+  h1 {
+    text-transform: capitalize;
+    font-size: 26px;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .total-amount-block {
+    @include flex($jst: center);
+    width: 150px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $section-border;
+    border-top: 1px solid $section-border;
+    p {
+      font-weight: 600;
+    }
+    & span {
+      margin-left: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .cart-items-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 1023px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 1023px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 1130px) {
+      justify-content: center;
+    }
+  }
+}

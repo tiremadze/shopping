@@ -1,0 +1,17 @@
+//cart-button
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: -10px;
+  right: -15px;
+  background: rgb(241, 65, 82);
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  color: white;
+}

@@ -1,0 +1,18 @@
+@import "../../../../../styles/scss/partials/params";
+@import "../../../../../styles/scss/partials/mixins";
+
+.empty-block {
+  margin: 0 auto;
+  padding-top: 100px;
+  @include flex($dir: column, $jst: center);
+  .empty-img {
+    width: 60px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $font-color;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}

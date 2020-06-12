@@ -1,0 +1,24 @@
+@import "partials/mixins";
+@import "partials/params";
+@import "partials/reset";
+@import "partials/fonts.scss";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  // font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.container-wrapper {
+  @include min-max(320px, 1440px, 0);
+  position: relative;
+  //overflow: hidden;
+  box-shadow: $image-box-shadow;
+}
+
+.wrap {
+  @include min-max(320px, 1298px, 30px);
+  min-height: calc(100vh - 72px);
+}

@@ -1,0 +1,58 @@
+@import "params";
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+}
+@mixin clear-list {
+  @include clear();
+  list-style: none;
+}
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin flex($dir: row, $jst: space-between) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jst;
+  align-items: center;
+}
+@mixin btn(
+  $bg: $section-border,
+  $color: $section-border,
+  $width: width,
+  $border-color: $section-border,
+  $height: 5px
+) {
+  width: $width;
+  padding: $height;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $border-color;
+  color: $color;
+  cursor: pointer;
+  letter-spacing: 0.14px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  @content;
+  &:hover {
+    background-color: $bg;
+    color: white;
+  }
+}
+
+@mixin active {
+  background-color: $section-border;
+  color: white;
+  @media (max-width: 320px) {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,90 @@
+@import "../../../../styles/scss/partials/mixins";
+
+.product-detalis-section {
+  width: 82.3%;
+  display: flex;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .details-img {
+    width: 43%;
+    height: 409px;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 20px;
+    }
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .product-details {
+    width: calc(100% - 43%);
+    padding: 10px 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: black;
+      margin-bottom: 23px;
+      font-weight: 600;
+    }
+    &-description {
+      color: rgb(128, 128, 128);
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: justify;
+    }
+    .price {
+      margin: 30px 0px 40px 0;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .size-path {
+      @include flex();
+      justify-content: flex-start;
+      p {
+        @media (max-width: 320px) {
+          margin-bottom: 20px;
+        }
+      }
+
+      .sizes {
+        //padding: 12px;
+        text-transform: uppercase;
+        margin-left: 20px;
+        color: black;
+
+        &.size-active {
+          @include active();
+        }
+        @media (max-width: 320px) {
+          margin-bottom: 20px;
+        }
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 320px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../styles/scss/partials/mixins";
+
+.group-container {
+  @include flex();
+  li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+    &.active {
+      @include active();
+    }
+    @media (max-width: 425px) {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+}

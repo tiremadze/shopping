@@ -1,0 +1,94 @@
+@import "../../../../../../styles/scss/partials/mixins";
+
+.product-element {
+  margin-right: 19px;
+  @media (max-width: 1296px) {
+    margin: 20px;
+  }
+  &:nth-child(4n) {
+    margin-right: 0px;
+    @media (max-width: 1296px) {
+      margin-right: 20px;
+    }
+  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 385px;
+  width: 295px;
+  margin-bottom: 30px;
+  box-shadow: $image-box-shadow;
+  transition: all 0.3s;
+  & .free-shiping {
+    display: block;
+    content: "sasa";
+    width: 96px;
+    height: 22px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background-color: $font-color;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+  }
+
+  .product-image {
+    display: flex;
+    height: 272px;
+    width: 100%;
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .product-title {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    justify-content: space-around;
+    height: 115px;
+    .product-description {
+      @include flex();
+      @media (max-width: 340px) {
+        flex-direction: column;
+        .product-name {
+          margin-bottom: 10px;
+        }
+      }
+      p {
+        color:black;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .product-price{
+        color:red;
+      }
+      .product-price {
+        font-weight: bold;
+        span {
+          margin-left: 2px;
+        }
+      }
+    }
+    .product-button {
+      @include btn($width: 225px, $border-color: #38373778);
+      width: 100%;
+
+      text-transform: uppercase;
+      margin: 0 auto;
+      span {
+        font-size: 30px;
+        margin-right: 5px;
+        font-weight: 100;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $image-box-shadow-hover;
+  }
+}

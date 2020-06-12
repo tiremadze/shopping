@@ -1,0 +1,14 @@
+@import "../../../styles/scss/partials/mixins";
+
+.select {
+  width: 200px;
+  height: 40px;
+  padding-left: 10px;
+  background: none;
+  border: 2px solid #38373778;
+  border-radius: 3px;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: $font-color;
+}

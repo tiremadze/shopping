@@ -1,0 +1,119 @@
+@import "../../../../../styles/scss/partials/mixins";
+
+.cart-item {
+  min-height: 110px;
+  width: 48%;
+  display: flex;
+  margin-bottom: 40px;
+  box-shadow: $image-box-shadow;
+
+  & .image-container {
+    height: 110px;
+    width: 120px;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  & .item-description {
+    h3 {
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+    }
+    display: flex;
+    flex-grow: 1;
+    padding: 10px 20px;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .price,
+      .total {
+        display: flex;
+        p {
+          margin-left: 5px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+      .price {
+        @media (max-width: 530px) {
+          margin: 15px 0;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: 530px) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 15px;
+      }
+      @media (max-width: 375px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .remove-button {
+        @include btn(
+          $width: 112px,
+          $color: $cart-button-color,
+          $border-color: $cart-button-color,
+          $bg: $cart-button-color,
+          $height: 10px
+        );
+        text-transform: capitalize;
+      }
+      .counter {
+        @include flex($jst: space-evenly);
+        margin-top: 5px;
+
+        .decrement {
+          font-size: 36px;
+          cursor: pointer;
+          @media (max-width: 375px) {
+            margin-left: 10px;
+          }
+        }
+        .increment {
+          font-size: 28px;
+          cursor: pointer;
+        }
+        @media (max-width: 530px) {
+          > div {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+    @media (max-width: 530px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media (max-width: 630px) {
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 1130px) {
+    width: 60%;
+  }
+  @media (max-width: 1060px) {
+    width: 80%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
+  @media (max-width: 360px) {
+    align-items: center;
+  }
+}

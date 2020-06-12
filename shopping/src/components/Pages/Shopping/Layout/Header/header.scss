@@ -1,0 +1,29 @@
+@import "../../../../../styles/scss/partials/mixins";
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-part {
+  @include flex();
+  position: relative;
+  background-color: $header-bg;
+  max-width: 1440px;
+  height: $header-height;
+  margin: 0 auto;
+  padding: 0 32px 0 30px;
+  box-shadow: $box-shadow;
+}
+//logo
+.brand {
+  width: 33%;
+}
+.logo {
+  
+  img {
+    width: 64px;
+  }
+}

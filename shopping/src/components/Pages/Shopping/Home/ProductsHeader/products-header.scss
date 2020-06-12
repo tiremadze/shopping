@@ -1,0 +1,41 @@
+@import "../../../../../styles/scss/partials/mixins";
+
+.section-title {
+  @include flex();
+  padding-top: 30px;
+  flex-wrap: wrap;
+  @media (max-width: 1011px) {
+    justify-content: center;
+  }
+  > div {
+    flex-basis: 33%;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+    }
+  }
+
+  .size-part {
+    @include flex($jst: flex-start);
+    p {
+      margin-right: 10px;
+      @media (max-width: 425px) {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
+  }
+
+  .sort-part {
+    @include flex($jst: flex-end);
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+}

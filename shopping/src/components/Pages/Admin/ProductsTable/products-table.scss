@@ -1,0 +1,23 @@
+.table {
+  margin: 40px auto 0px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  td {
+    line-height: 150px;
+    font-weight: 600;
+    span {
+      margin-left: 5px;
+      text-transform: uppercase;
+    }
+    .img-container {
+      width: 150px;
+      height: 150px;
+      img {
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+  }
+}

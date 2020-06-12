@@ -1,0 +1,15 @@
+@import "../../../../../../styles/scss/partials/mixins";
+
+.nav{
+  width: 33%;
+  .menu{
+    display: flex;
+    li{
+      margin-right: 20px;
+           
+    }
+  }
+}
+.selected{
+  font-weight: bold;
+}

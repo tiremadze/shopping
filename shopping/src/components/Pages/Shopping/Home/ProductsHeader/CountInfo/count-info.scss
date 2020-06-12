@@ -1,0 +1,11 @@
+@import "../../../../../../styles/scss/partials/mixins";
+
+.count-part {
+  @include flex($jst: center);
+  .found-products {
+    font-weight: 700;
+  }
+  p {
+    margin-left: 5px;
+  }
+}
